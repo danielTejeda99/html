@@ -23,95 +23,112 @@
         margin-left: auto;
         margin-right: auto;
       }
-      .contenedor {       
+      .contenedor {
         background-color: white;
         border-radius: 8px;
       }
       body {
         display: flex;
-        justify-content: center; 
-        align-items: center; 
-        background-color: #E6EDF3;
+        justify-content: center;
+        align-items: center;
+        background-color: #e6edf3;
         height: 97vh;
       }
       button {
-        background-color: #FEC82F;
+        background-color: #fec82f;
       }
     </style>
   </head>
   <body>
     <div class="contenedor">
-        <!-- <h1>hola mundo</h1> -->
-        <div id="api" data-name="Unified">
-          <div class="heading">
-            <h1 role="heading">Iniciar sesión</h1>
+      <!-- <h1>hola mundo</h1> -->
+      <div id="api" data-name="Unified">        
+        <form
+          id="localAccountForm"
+          class="localAccount"
+          aria-label="Iniciar sesión con su nombre de usuario"
+        >
+          <div class="intro">
+            <h2>Iniciar sesión con su nombre de usuario</h2>
           </div>
-            <div class="claims-provider-list-buttons social" aria-label="Iniciar sesión con su cuenta de redes sociales" role="form">
-              <div class="intro">
-                <h2>Iniciar sesión con su cuenta de redes sociales</h2>
+          <div
+            class="error pageLevel"
+            aria-hidden="true"
+            role="alert"
+            style="display: none"
+          >
+            <p></p>
+          </div>
+          <div class="entry">
+            <div class="entry-item">
+              <label for="UserId"> Nombre de usuario </label>
+              <div
+                class="error itemLevel"
+                aria-hidden="true"
+                role="alert"
+                style="display: none"
+              >
+                <p></p>
               </div>
-              <div class="options">
-                  <div>
-                      <button class="accountButton firstButton claims-provider-selection" id="FundacionGrupoSocial" role="link" autofocus="">Fundacion Grupo Social</button>
-                  </div>
-                              <div>
-                      <button class="accountButton claims-provider-selection" id="MicrosoftAccountExchange" role="link">Microsoft</button>
-                  </div>
-                              <div>
-                      <button class="accountButton claims-provider-selection" id="GoogleExchange" role="link">Google</button>
-                  </div>
-                          </div>
+              <input
+                type="text"
+                id="UserId"
+                name="Nombre de usuario"
+                title="Escriba un valor de nombre de usuario válido."
+                pattern="^[a-zA-Z0-9]+[a-zA-Z0-9_-]*$"
+                autofocus=""
+                placeholder="Nombre de usuario"
+                aria-label="Nombre de usuario"
+              />
             </div>
-    
-            <div class="divider">
-              <h2>O</h2>
-            </div>
-          <form id="localAccountForm" class="localAccount" aria-label="Iniciar sesión con su nombre de usuario">
-            <div class="intro">
-              <h2>
-                Iniciar sesión con su nombre de usuario
-              </h2>
-            </div>
-            <div class="error pageLevel" aria-hidden="true" role="alert" style="display: none;">
-              <p></p>
-            </div>
-            <div class="entry">
-              <div class="entry-item">
-                <label for="UserId">
-                  Nombre de usuario
-                </label>
-                <div class="error itemLevel" aria-hidden="true" role="alert" style="display: none;">
-                  <p></p>
-                </div>
-                <input type="text" id="UserId" name="Nombre de usuario" title="Escriba un valor de nombre de usuario válido." pattern="^[a-zA-Z0-9]+[a-zA-Z0-9_-]*$" autofocus="" placeholder="Nombre de usuario" aria-label="Nombre de usuario">
+            <div class="entry-item">
+              <div class="password-label">
+                <label for="password">Contraseña</label>
+                <a
+                  id="forgotPassword"
+                  href="/fundaciongruposocial1B2Cpoc.onmicrosoft.com/B2C_1_sales-qa-signin-signup/api/CombinedSigninAndSignup/forgotPassword?csrf_token=NVFGanZ1d1ovQVplVTVOb0duM21Da2M2V05NRHdxQVk5bThTL1cvYjg2ak1pOUJzMlNGeFgwVm9va0Z2eGhsbVRsU0V2cVVaSUkrb2pvR2NQMU02L0E9PTsyMDIzLTA5LTI1VDIxOjIwOjA2Ljc1NTczMDVaO0xBTjNtS1pxcmxTa005ejB0N0dGd2c9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiI3MzBkNmM1MC01MTAyLTQ2MzgtOTI2NS03Y2RjZTEwNjg4MzcifQ&amp;p=B2C_1_sales-qa-signin-signup"
+                  >¿Olvidó su contraseña?</a
+                >
               </div>
-                <div class="entry-item">
-                  <div class="password-label">
-                    <label for="password">Contraseña</label>
-                        <a id="forgotPassword" href="/fundaciongruposocial1B2Cpoc.onmicrosoft.com/B2C_1_sales-qa-signin-signup/api/CombinedSigninAndSignup/forgotPassword?csrf_token=NVFGanZ1d1ovQVplVTVOb0duM21Da2M2V05NRHdxQVk5bThTL1cvYjg2ak1pOUJzMlNGeFgwVm9va0Z2eGhsbVRsU0V2cVVaSUkrb2pvR2NQMU02L0E9PTsyMDIzLTA5LTI1VDIxOjIwOjA2Ljc1NTczMDVaO0xBTjNtS1pxcmxTa005ejB0N0dGd2c9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiI3MzBkNmM1MC01MTAyLTQ2MzgtOTI2NS03Y2RjZTEwNjg4MzcifQ&amp;p=B2C_1_sales-qa-signin-signup">¿Olvidó su contraseña?</a>
-                                  </div>
-                  <div class="error itemLevel" aria-hidden="true" style="display: none;">
-                    <p role="alert"></p>
-                  </div>
-                  <input type="password" id="password" name="Contraseña" placeholder="Contraseña" aria-label="Contraseña" autocomplete="current-password" aria-required="true">
-                              </div>
-              
-              <div class="working"></div>
-    
-    
-              <div class="buttons">
-                <button id="next" type="submit" form="localAccountForm">Iniciar sesión</button>
+              <div
+                class="error itemLevel"
+                aria-hidden="true"
+                style="display: none"
+              >
+                <p role="alert"></p>
               </div>
+              <input
+                type="password"
+                id="password"
+                name="Contraseña"
+                placeholder="Contraseña"
+                aria-label="Contraseña"
+                autocomplete="current-password"
+                aria-required="true"
+              />
             </div>
-                  <div class="divider">
-                    <h2>O</h2>
-                  </div>
-                  <div class="create">
-                    <p>
-                      ¿No tiene una cuenta?<a id="createAccount" href="/fundaciongruposocial1B2Cpoc.onmicrosoft.com/B2C_1_sales-qa-signin-signup/api/CombinedSigninAndSignup/unified?local=signup&amp;csrf_token=NVFGanZ1d1ovQVplVTVOb0duM21Da2M2V05NRHdxQVk5bThTL1cvYjg2ak1pOUJzMlNGeFgwVm9va0Z2eGhsbVRsU0V2cVVaSUkrb2pvR2NQMU02L0E9PTsyMDIzLTA5LTI1VDIxOjIwOjA2Ljc1NTczMDVaO0xBTjNtS1pxcmxTa005ejB0N0dGd2c9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiI3MzBkNmM1MC01MTAyLTQ2MzgtOTI2NS03Y2RjZTEwNjg4MzcifQ&amp;p=B2C_1_sales-qa-signin-signup">Registrarse ahora</a>
-                    </p>
-                  </div>
-          </form>
+
+            <div class="working"></div>
+
+            <div class="buttons">
+              <button id="next" type="submit" form="localAccountForm">
+                Iniciar sesión
+              </button>
+            </div>
+          </div>
+          <div class="divider">
+            <h2>O</h2>
+          </div>
+          <div class="create">
+            <p>
+              ¿No tiene una cuenta?<a
+                id="createAccount"
+                href="/fundaciongruposocial1B2Cpoc.onmicrosoft.com/B2C_1_sales-qa-signin-signup/api/CombinedSigninAndSignup/unified?local=signup&amp;csrf_token=NVFGanZ1d1ovQVplVTVOb0duM21Da2M2V05NRHdxQVk5bThTL1cvYjg2ak1pOUJzMlNGeFgwVm9va0Z2eGhsbVRsU0V2cVVaSUkrb2pvR2NQMU02L0E9PTsyMDIzLTA5LTI1VDIxOjIwOjA2Ljc1NTczMDVaO0xBTjNtS1pxcmxTa005ejB0N0dGd2c9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiI3MzBkNmM1MC01MTAyLTQ2MzgtOTI2NS03Y2RjZTEwNjg4MzcifQ&amp;p=B2C_1_sales-qa-signin-signup"
+                >Registrarse ahora</a
+              >
+            </p>
+          </div>
+        </form>
       </div>
     </div>
   </body>
