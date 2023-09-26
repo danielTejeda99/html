@@ -4,7 +4,6 @@
     <title>My Product Brand Name</title>
     <style>
       h1 {
-        color: red;
         text-align: center;
       }
       .intro h2 {
@@ -34,15 +33,60 @@
         background-color: #e6edf3;
         height: 97vh;
       }
-      button {
-        background-color: #fec82f;
+      heading{
+
       }
     </style>
   </head>
   <body>
     <div class="contenedor">
       <!-- <h1>hola mundo</h1> -->
-      <div id="api" data-name="Unified">        
+        <div class="heading">
+          <h1 role="heading">Iniciar sesión</h1>
+        </div>
+        <div
+          class="claims-provider-list-buttons social"
+          aria-label="Iniciar sesión con su cuenta de redes sociales"
+          role="form"
+        >
+          <div class="intro">
+            <h2>Iniciar sesión con su cuenta de redes sociales</h2>
+          </div>
+          <div class="options">
+            <div>
+              <button
+                class="accountButton firstButton claims-provider-selection"
+                id="FundacionGrupoSocial"
+                role="link"
+                autofocus=""
+              >
+                Fundacion Grupo Social
+              </button>
+            </div>
+            <div>
+              <button
+                class="accountButton claims-provider-selection"
+                id="MicrosoftAccountExchange"
+                role="link"
+              >
+                Microsoft
+              </button>
+            </div>
+            <div>
+              <button
+                class="accountButton claims-provider-selection"
+                id="GoogleExchange"
+                role="link"
+              >
+                Google
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider">
+          <h2>O</h2>
+        </div>
         <form
           id="localAccountForm"
           class="localAccount"
@@ -129,7 +173,6 @@
             </p>
           </div>
         </form>
-      </div>
     </div>
   </body>
 </html>
