@@ -1,291 +1,338 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>My Product Brand Name</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+    />
 
-<head>
-  <title>My Product Brand Name</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
-
-  <style>
-    h1 {
-      text-align: center;
-    }
-
-    .intro h2 {
-      text-align: center;
-    }
-
-    .entry {
-      width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-      position: relative;
-    }
-
-    .divider h2 {
-      text-align: center;
-    }
-
-    .create {
-      width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .contenedor {
-      background-color: white;
-      border-radius: 8px;
-      padding: 20px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .contenedor #api div {
-      width: 100%;
-    }
-
-    @media only screen and (max-width: 600px) {
-      .contenedor {
-        width: 90%;
+    <style>
+      h1 {
+        text-align: center;
       }
-    }
 
-    @media only screen and (min-width: 601px) and (max-width: 1024px) {
+      .intro h2 {
+        text-align: center;
+      }
+
+      .entry {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+      }
+
+      .divider h2 {
+        text-align: center;
+      }
+
+      .create {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       .contenedor {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .contenedor #api div {
+        width: 100%;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .contenedor {
+          width: 90%;
+        }
+      }
+
+      @media only screen and (min-width: 601px) and (max-width: 1024px) {
+        .contenedor {
+          width: 70%;
+        }
+      }
+
+      body {
+        background-color: #e6edf3;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .divider {
+        display: none;
+      }
+
+      .entry input {
+        border-radius: 8px;
+        padding: 15px;
+        border: 1px solid #e9eaec;
+        margin-top: 10px;
+        width: 92%;
+      }
+
+      .entry label {
+        color: #40444d;
+        font-weight: bold;
+      }
+
+      .entry-item {
+        margin-bottom: 20px;
+      }
+
+      .entry-item label {
+        display: none;
+      }
+
+      .intro {
+        display: none;
+      }
+
+      .heading {
+        display: none;
+      }
+
+      .container-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .buttons button {
+        background-color: #fec82f;
+        border: none;
+        border-radius: 5px;
+        padding: 15px;
+        font-family: "Roboto", sans-serif;
+        float: right;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 15px;
+      }
+
+      .create {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #40444d;
+      }
+
+      .create a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+        color: #008296;
+      }
+
+      .password-label a {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-bottom: -50px;
+        color: #40444d;
+        font-size: small;
+      }
+
+      #api {
+        display: table;
+        margin: 0;
+        width: 100%;
+      }
+
+      .social {
+        display: table-footer-group;
+        position: relative;
+        top: 1px;
+        width: auto;
+        box-shadow: 1px 1px 5px #cecece;
+        border-radius: 5px;
+      }
+
+      .social .options div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+
+      .social .options button {
+        background-color: white;
+        padding: 10px;
         width: 70%;
+        border-radius: 5px;
+        border: none;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        color: #606773;
       }
-    }
 
+      .accountButton {
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
 
+      #GoogleExchange {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAMAAACP+FljAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABOFBMVEX////62NXyi4Pual/rUEPqSz3tXlLyi4L5y8f86OfvcmjqQzXub2T85uT61dLrU0fvdWv86+nrT0LtX1PxgnnwgHfsXVHuaF398vHvdWnsWEv4xsL4wr7wenD+7sP0jRfqRjPsVkn85eT81mf7vAX3pQ7sUy/3ubT7xzH5uBj+/PyGsfjC1/v7vxP7yz9ChfSSuPiMtPj7xzDzwR78/fxel/VZlPWcv/n51GTVuBNOqki03r+vy/q60vv3672vtCI6qFA0qFNIsGTj8+jw9f5clvVDhfRrv4JLsWbC5cvY7t5gnt6Gsffp9exBrV5StGx4xY17xo9cuXU1pls9j8FNjPTo8P3S69lGr2JLoaPO3/zn9Opnvn5UtW7X7t3V7duCyZVeundCrl87q1lOs2l6xo+84sb9/v2qdWS0AAAAAWJLR0QAiAUdSAAAAAd0SU1FB+EIGQ4HDEDExrUAAADWSURBVDjLY2AYBZiAkYmZhZWNnQOHNCcXNxTw8GKT5+PnhgMBLPKCQiAZYRFRMW5ucQksCiSB0lLSIJaMLDZ5OXkFbkUlPB5QVlFVU8fnQw0VFU0tEEMbCnTQFOiqqOiBGfpQYEBIgSGaAiMVFWMTEMMUCMyACszRFFioWFpZwzg2QAW2aArs7B0cnZwhbBdXfX03F3RvuDs6Onp4glhe3kADfDD86esHVOHoHxAY5Bgcoh8ahhkS4RGOcBAZhS2somNg8rFxOIIzPiExKTklNS2dYaQBADviJWzWK7IJAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE3LTA4LTI1VDE0OjA3OjEyLTA0OjAwBQDEvwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNy0wOC0yNVQxNDowNzoxMi0wNDowMHRdfAMAAAAASUVORK5CYII=);
+      }
 
-    body {
-      background-color: #e6edf3;
-      font-family: "Roboto", sans-serif;
-    }
+      #MicrosoftAccountExchange {
+        background-image: url(data:image/jpeg;base64,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);
+      }
 
-    .divider {
-      display: none;
-    }
+      #FundacionGrupoSocial {
+        background-image: url("images/logoFundacion.svg");
+      }
 
-    .entry input {
-      border-radius: 8px;
-      padding: 15px;
-      border: 1px solid #e9eaec;
-      margin-top: 10px;
-      width: 92%;
-    }
+      .buttons #next {
+        width: 100%;
+        margin-top: 50px;
+      }
 
-    .entry label {
-      color: #40444d;
-      font-weight: bold;
-    }
+      #forgotPassword {
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .itemLevel p{
+        display: none;
+      }
+    </style>
+  </head>
 
-    .entry-item {
-      margin-bottom: 20px;
-    }
-
-    .intro {
-      display: none;
-    }
-
-    .heading {
-      display: none;
-    }
-
-    .container-logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-
-    .buttons button {
-      background-color: #fec82f;
-      border: none;
-      border-radius: 5px;
-      padding: 15px;
-      font-family: "Roboto", sans-serif;
-      float: right;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .create {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #40444d;
-    }
-
-    .create a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 5px;
-      color: #008296;
-    }
-
-    .password-label a {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      margin-bottom: -50px;
-      color: #40444d;
-      font-size: small;
-    }
-
-    #api {
-      display: table;
-      margin: 0;
-      width: 100%;
-    }
-
-    .social {
-      display: table-footer-group;
-      position: relative;
-      top: 1px;
-      width: auto;
-      box-shadow: 1px 1px 5px #cecece;
-      border-radius: 5px;
-    }
-
-    .social .options div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 10px;
-      margin-top: 10px;
-    }
-
-    .social .options button {
-      background-color: white;
-      padding: 10px;
-      width: 70%;
-      border-radius: 5px;
-      border: none;
-      font-family: "Roboto", sans-serif;
-      font-weight: bold;
-      color: #606773;
-    }
-
-    .accountButton {
-      background-repeat: no-repeat;
-      cursor: pointer;
-    }
-
-    #GoogleExchange {
-      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAMAAACP+FljAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABOFBMVEX////62NXyi4Pual/rUEPqSz3tXlLyi4L5y8f86OfvcmjqQzXub2T85uT61dLrU0fvdWv86+nrT0LtX1PxgnnwgHfsXVHuaF398vHvdWnsWEv4xsL4wr7wenD+7sP0jRfqRjPsVkn85eT81mf7vAX3pQ7sUy/3ubT7xzH5uBj+/PyGsfjC1/v7vxP7yz9ChfSSuPiMtPj7xzDzwR78/fxel/VZlPWcv/n51GTVuBNOqki03r+vy/q60vv3672vtCI6qFA0qFNIsGTj8+jw9f5clvVDhfRrv4JLsWbC5cvY7t5gnt6Gsffp9exBrV5StGx4xY17xo9cuXU1pls9j8FNjPTo8P3S69lGr2JLoaPO3/zn9Opnvn5UtW7X7t3V7duCyZVeundCrl87q1lOs2l6xo+84sb9/v2qdWS0AAAAAWJLR0QAiAUdSAAAAAd0SU1FB+EIGQ4HDEDExrUAAADWSURBVDjLY2AYBZiAkYmZhZWNnQOHNCcXNxTw8GKT5+PnhgMBLPKCQiAZYRFRMW5ucQksCiSB0lLSIJaMLDZ5OXkFbkUlPB5QVlFVU8fnQw0VFU0tEEMbCnTQFOiqqOiBGfpQYEBIgSGaAiMVFWMTEMMUCMyACszRFFioWFpZwzg2QAW2aArs7B0cnZwhbBdXfX03F3RvuDs6Onp4glhe3kADfDD86esHVOHoHxAY5Bgcoh8ahhkS4RGOcBAZhS2somNg8rFxOIIzPiExKTklNS2dYaQBADviJWzWK7IJAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE3LTA4LTI1VDE0OjA3OjEyLTA0OjAwBQDEvwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNy0wOC0yNVQxNDowNzoxMi0wNDowMHRdfAMAAAAASUVORK5CYII=);
-    }
-
-    #MicrosoftAccountExchange {
-      background-image: url(data:image/jpeg;base64,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);
-    }
-
-    #FundacionGrupoSocial {
-      background-image: url("images/logoFundacion.svg");
-    }
-
-    .buttons #next {
-      width: 100%;
-      margin-top: 50px;
-    }
-
-    #forgotPassword {
-      text-decoration: none;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- <h1>hola mundo</h1> -->
-  <div class="contenedor">
-    <div class="container-logo">
-      <img src="images/logo.svg" alt="Company Logo" data-tenant-branding-logo="true" />
-    </div>
-    <div id="api" data-name="Unified">
-      <div class="heading">
-        <h1 role="heading">Iniciar sesión</h1>
+  <body>   
+    <div class="contenedor">
+      <div class="container-logo">
+        <img
+          src="https://aadcdn.msftauthimages.net/dbd5a2dd-qsxrcriw-rwt6o-uz1jc8wpgq-n3zy4mllhq-kewm7k/logintenantbranding/0/bannerlogo?ts=638187258612654573"
+          alt="Company Logo"
+          data-tenant-branding-logo="true"
+        />
       </div>
-      <div class="claims-provider-list-buttons social" aria-label="Iniciar sesión con su cuenta de redes sociales"
-        role="form">
-        <div class="intro">
-          <h2>Iniciar sesión con su cuenta de redes sociales</h2>
+      <div id="api" data-name="Unified">
+        <div class="heading">
+          <h1 role="heading">Iniciar sesión</h1>
         </div>
-        <div class="options">
-          <div>
-            <button class="accountButton firstButton claims-provider-selection" id="FundacionGrupoSocial" role="link"
-              autofocus="">Fundacion Grupo Social</button>
+        <div
+          class="claims-provider-list-buttons social"
+          aria-label="Iniciar sesión con su cuenta de redes sociales"
+          role="form"
+        >
+          <div class="intro">
+            <h2>Iniciar sesión con su cuenta de redes sociales</h2>
           </div>
-          <div>
-            <button class="accountButton claims-provider-selection" id="MicrosoftAccountExchange"
-              role="link">Microsoft</button>
-          </div>
-          <div>
-            <button class="accountButton claims-provider-selection" id="GoogleExchange" role="link">Google</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="divider">
-        <h2>O</h2>
-      </div>
-      <form id="localAccountForm" class="localAccount" aria-label="Iniciar sesión con su nombre de usuario">
-        <div class="intro">
-          <h2>
-            Iniciar sesión con su nombre de usuario
-          </h2>
-        </div>
-        <div class="error pageLevel" aria-hidden="true" role="alert" style="display: none;">
-          <p></p>
-        </div>
-        <div class="entry">
-          <div class="entry-item">
-            <label for="UserId">
-              Nombre de usuario
-            </label>
-            <div class="error itemLevel" aria-hidden="true" role="alert" style="display: none;">
-              <p></p>
+          <div class="options">
+            <div>
+              <button
+                class="accountButton firstButton claims-provider-selection"
+                id="FundacionGrupoSocial"
+                role="link"
+                autofocus=""
+              >
+                Fundacion Grupo Social
+              </button>
             </div>
-            <input type="text" id="UserId" name="Nombre de usuario"
-              title="Escriba un valor de nombre de usuario válido." pattern="^[a-zA-Z0-9]+[a-zA-Z0-9_-]*$" autofocus=""
-              placeholder="Nombre de usuario" aria-label="Nombre de usuario">
-          </div>
-          <div class="entry-item">
-            <div class="password-label">
-              <label for="password">Contraseña</label>
-              <a id="forgotPassword"
-                href="/fundaciongruposocial1b2cpoc.onmicrosoft.com/B2C_1_sales-qa-signin-signup/api/CombinedSigninAndSignup/forgotPassword?csrf_token=a2FWZG5zSVlwOTczYUIrV1gyOXlhZGo5WnFQSUgyR0IzTGQ4ek9tTG9MaFBxK0I2MEorYnRBR1ErNFR6eUJPcGxFdndkeko2eDU5MEJ3amptdEpZa2c9PTsyMDIzLTEyLTE1VDA1OjEzOjQwLjExNzI1NTNaOzlBMUU5VEV0SjhPUGpjc0RwVUhvdWc9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiI3NzUwOWFlNy02MmY5LTRmOWYtODgwYi0wMDBiOTQ3MDhlZTEifQ&amp;p=B2C_1_sales-qa-signin-signup">¿Olvidó
-                su contraseña?</a>
+            <div>
+              <button
+                class="accountButton claims-provider-selection"
+                id="GoogleExchange"
+                role="link"
+              >
+                Google
+              </button>
             </div>
-            <div class="error itemLevel" aria-hidden="true" style="display: none;">
-              <p role="alert"></p>
+            <div>
+              <button
+                class="accountButton claims-provider-selection"
+                id="MicrosoftAccountExchange"
+                role="link"
+              >
+                Microsoft
+              </button>
             </div>
-            <input type="password" id="password" name="Contraseña" placeholder="Contraseña" aria-label="Contraseña"
-              autocomplete="current-password" aria-required="true">
-          </div>
-
-          <div class="working"></div>
-
-
-          <div class="buttons">
-            <button id="next" type="submit" form="localAccountForm">Iniciar sesión</button>
           </div>
         </div>
+
         <div class="divider">
           <h2>O</h2>
         </div>
-        <div class="create">
-          <p>
-            ¿No tiene una cuenta?<a id="createAccount"
-              href="/fundaciongruposocial1b2cpoc.onmicrosoft.com/B2C_1_sales-qa-signin-signup/api/CombinedSigninAndSignup/unified?local=signup&amp;csrf_token=a2FWZG5zSVlwOTczYUIrV1gyOXlhZGo5WnFQSUgyR0IzTGQ4ek9tTG9MaFBxK0I2MEorYnRBR1ErNFR6eUJPcGxFdndkeko2eDU5MEJ3amptdEpZa2c9PTsyMDIzLTEyLTE1VDA1OjEzOjQwLjExNzI1NTNaOzlBMUU5VEV0SjhPUGpjc0RwVUhvdWc9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiI3NzUwOWFlNy02MmY5LTRmOWYtODgwYi0wMDBiOTQ3MDhlZTEifQ&amp;p=B2C_1_sales-qa-signin-signup">Registrarse
-              ahora</a>
-          </p>
-        </div>
-      </form>
-    </div>
-  </div>
-  </div>
-</body>
+        <form
+          id="localAccountForm"
+          class="localAccount"
+          aria-label="Iniciar sesión con su nombre de usuario"
+        >
+          <div class="intro">
+            <h2>Iniciar sesión con su nombre de usuario</h2>
+          </div>
+          <div class="error pageLevel" aria-hidden="true" role="alert">
+            <p></p>
+          </div>
+          <div class="entry">
+            <div class="entry-item">
+              <label for="UserId"> Nombre de usuario </label>
+              <div
+                class="error itemLevel"
+                aria-hidden="false"
+                role="alert"
+                style="display: block"
+              >
+                <p>Especifique su Nombre de usuario.</p>
+              </div>
+              <input
+                type="text"
+                id="UserId"
+                name="Nombre de usuario"
+                title="Escriba un valor de nombre de usuario válido."
+                pattern="^[a-zA-Z0-9]+[a-zA-Z0-9_-]*$"
+                autofocus=""
+                placeholder="Nombre de usuario"
+                aria-label="Nombre de usuario"
+                class="highlightError"
+              />
+            </div>
+            <div class="entry-item">
+              <div class="password-label">
+                <label for="password">Contraseña</label>
+                <a
+                  id="forgotPassword"
+                  href="/fundaciongruposocial1b2cpoc.onmicrosoft.com/B2C_1_sales-qa-signin/api/CombinedSigninAndSignup/forgotPassword?csrf_token=VFk2ZjNvWXhTS29uUlF5WVQ0MGNqdWhiVmgzd3k3U0k2TVM4WFI4a0FrVWowLzNKMkdiQkxkZm90WCtoTXpaSU5oT2FCbVE1UGtVR1ovVEdQQjlsZ0E9PTsyMDIzLTEyLTIwVDE5OjU0OjM2LjY3OTExMVo7UDQ0cDhwZlpsMkcyWEFxYzNVeEh4dz09O3siT3JjaGVzdHJhdGlvblN0ZXAiOjF9&amp;tx=StateProperties=eyJUSUQiOiJiMTk0OTk4OC05ZjQ5LTRlYjYtYTg2NS0wN2Y4ZGM0YTA3NTMifQ&amp;p=B2C_1_sales-qa-signin"
+                  >¿Olvidó su contraseña?</a
+                >
+              </div>
+              <div
+                class="error itemLevel"
+                aria-hidden="false"
+                style="display: block"
+              >
+                <p role="alert">Escriba su contraseña</p>
+              </div>
+              <input
+                type="password"
+                id="password"
+                name="Contraseña"
+                placeholder="Contraseña"
+                aria-label="Contraseña"
+                autocomplete="current-password"
+                aria-required="true"
+                class="highlightError"
+              />
+            </div>
+            <div class="working"></div>
 
+            <div class="buttons">
+              <button id="next" type="submit" form="localAccountForm">
+                Iniciar sesión
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
